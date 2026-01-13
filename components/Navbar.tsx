@@ -24,18 +24,18 @@ export default function Navbar() {
             />
           </div>
           <div>
-            <p className="font-display text-base text-pine-800">
+            <p className="font-display text-[19px] text-pine-800">
               {siteConfig.name}
             </p>
-            <p className="text-xs uppercase tracking-[0.2em] text-pine-700">
+            <p className="text-[15px] uppercase tracking-[0.2em] text-pine-700">
               Lawn Care
             </p>
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-pine-800">
+            <p className="text-[15px] font-semibold uppercase tracking-[0.22em] text-pine-800">
               Veteran Owned and Operated
             </p>
           </div>
         </Link>
-        <nav className="hidden items-center gap-6 text-sm font-semibold text-soil-700 md:flex">
+        <nav className="hidden items-center gap-6 text-[17px] font-semibold text-soil-700 md:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -47,7 +47,7 @@ export default function Navbar() {
           ))}
           <Link
             href="/contact"
-            className="button-base bg-pine-600 text-white shadow-glow hover:bg-pine-700"
+            className="button-base bg-pine-600 text-[17px] text-white shadow-glow hover:bg-pine-700"
           >
             Request Estimate
           </Link>
