@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e6efe0" />
+      <stop offset="100%" stop-color="#a3c39a" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#grad)" />
+  <circle cx="200" cy="220" r="140" fill="#cdb69b" opacity="0.4" />
+  <circle cx="980" cy="700" r="180" fill="#7ea673" opacity="0.35" />
+  <rect x="120" y="140" width="960" height="620" rx="48" fill="#ffffff" opacity="0.55" />
+  <text x="160" y="460" font-family="Merriweather, serif" font-size="48" fill="#375833">
+    Freshly Maintained Lawn
+  </text>
+  <text x="160" y="520" font-family="Source Sans 3, sans-serif" font-size="28" fill="#476f3f">
+    Placeholder image
+  </text>
+</svg>

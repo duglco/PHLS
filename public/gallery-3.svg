@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700">
+  <rect width="900" height="700" fill="#7ea673" />
+  <rect x="80" y="90" width="740" height="520" rx="36" fill="#ffffff" opacity="0.55" />
+  <text x="120" y="360" font-family="Merriweather, serif" font-size="36" fill="#375833">
+    Lawn Care Project 3
+  </text>
+  <text x="120" y="420" font-family="Source Sans 3, sans-serif" font-size="22" fill="#476f3f">
+    Placeholder image
+  </text>
+</svg>

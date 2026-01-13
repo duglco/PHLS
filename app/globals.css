@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-soil-100 text-soil-800 font-body antialiased;
+  background-image: linear-gradient(
+      rgba(245, 239, 232, 0.9),
+      rgba(245, 239, 232, 0.9)
+    ),
+    url("/grass-texture.svg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+::selection {
+  background-color: rgba(92, 138, 82, 0.35);
+}
+
+.skip-link {
+  @apply sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:text-soil-800 focus:shadow-card;
+}
+
+.button-base {
+  @apply inline-flex items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-semibold tracking-wide transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pine-600;
+}
+
+.input-base {
+  @apply w-full rounded-2xl border border-soil-200 bg-white px-4 py-3 text-sm text-soil-800 shadow-sm focus:border-pine-500 focus:outline-none focus:ring-2 focus:ring-pine-200;
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+}
+
+.fade-in {
+  animation: floatUp 0.7s ease-out both;
+}

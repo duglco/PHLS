@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6fb857" />
+      <stop offset="55%" stop-color="#4e8c3c" />
+      <stop offset="100%" stop-color="#3a6f2f" />
+    </linearGradient>
+    <pattern id="blades" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(18)">
+      <rect width="24" height="24" fill="none" />
+      <path d="M2 22 L6 2" stroke="#7fc46a" stroke-width="2" stroke-linecap="round" opacity="0.6" />
+      <path d="M10 22 L14 4" stroke="#6fb857" stroke-width="2" stroke-linecap="round" opacity="0.55" />
+      <path d="M18 22 L22 6" stroke="#5ea94f" stroke-width="2" stroke-linecap="round" opacity="0.5" />
+    </pattern>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#g)" />
+  <rect width="1600" height="1200" fill="url(#blades)" opacity="0.5" />
+  <rect width="1600" height="1200" fill="url(#blades)" opacity="0.35" transform="rotate(-6 800 600)" />
+</svg>
