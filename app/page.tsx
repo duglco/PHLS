@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { siteConfig } from "@/lib/site";
 import HeroEstimateForm from "@/components/HeroEstimateForm";
+import RecentWorkGallery from "@/components/RecentWorkGallery";
 
 const faqs = [
   {
@@ -223,24 +224,7 @@ export default function HomePage() {
               View the gallery
             </Link>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {["/gallery-1.svg", "/gallery-2.svg", "/gallery-3.svg", "/gallery-4.svg"].map(
-              (src) => (
-                <div
-                  key={src}
-                  className="overflow-hidden rounded-3xl border border-soil-200 bg-white shadow-sm"
-                >
-                  <Image
-                    src={src}
-                    alt="Lawn care project"
-                    width={400}
-                    height={320}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-              )
-            )}
-          </div>
+          <RecentWorkGallery />
         </div>
       </section>
 
