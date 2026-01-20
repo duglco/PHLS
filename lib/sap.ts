@@ -73,6 +73,8 @@ async function sendLeadEmail(lead: LeadPayload, leadId: string) {
   const user = process.env.SMTP_USER;
   const pass = process.env.SMTP_PASS;
   const salesEmail = process.env.SALES_EMAIL;
+  const port = Number(process.env.SMTP_PORT ?? 587);
+  const secure = process.env.SMTP_SECURE === "true";
 
   if (!host || !user || !pass || !salesEmail) {
     return { delivered: false };
@@ -80,6 +82,9 @@ async function sendLeadEmail(lead: LeadPayload, leadId: string) {
 
   const transporter = nodemailer.createTransport({
     host,
+    port,
+    secure,
+    requireTLS: !secure,
     auth: { user, pass }
   });
 
@@ -98,13 +103,18 @@ async function sendLeadEmail(lead: LeadPayload, leadId: string) {
     `Notes: ${lead.notes || "None"}`
   ];
 
-  await transporter.sendMail({
-    from: `Pine Hills Lawn <${user}>`,
-    to: salesEmail,
-    subject: `New lawn care lead (${lead.fullName})`,
-    text: messageLines.join("\n"),
-    replyTo: lead.email ? lead.email : undefined
-  });
+  try {
+    await transporter.sendMail({
+      from: `Pine Hills Lawn <${user}>`,
+      to: salesEmail,
+      subject: `New lawn care lead (${lead.fullName})`,
+      text: messageLines.join("\n"),
+      replyTo: lead.email ? lead.email : undefined
+    });
+  } catch (error) {
+    console.warn("[Lead] Sales email failed", error);
+    return { delivered: false };
+  }
 
   if (lead.email) {
     const customerLines = [

@@ -22,7 +22,7 @@ Copy `.env.example` to `.env.local` and fill in values.
 
 - `NEXT_PUBLIC_SITE_URL`: canonical site URL (used for metadata and sitemap)
 - `SAP_API_URL` / `SAP_API_KEY`: Service AutoPilot credentials
-- `SMTP_HOST` / `SMTP_USER` / `SMTP_PASS` / `SALES_EMAIL`: fallback email delivery
+- `SMTP_HOST` / `SMTP_PORT` / `SMTP_USER` / `SMTP_PASS` / `SALES_EMAIL` / `SMTP_SECURE`: fallback email delivery
 - `PLAUSIBLE_DOMAIN`: enable Plausible analytics script
 
 ## Service AutoPilot integration
