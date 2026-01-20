@@ -4,6 +4,7 @@ import nodemailer from "nodemailer";
 import { randomUUID } from "crypto";
 
 import type { LeadPayload } from "@/lib/leadSchema";
+import { siteConfig } from "@/lib/site";
 
 const DEFAULT_TIMEOUT_MS = 8000;
 const MAX_RETRIES = 2;
@@ -82,6 +83,9 @@ async function sendLeadEmail(lead: LeadPayload, leadId: string) {
     auth: { user, pass }
   });
 
+  const businessName = siteConfig.name;
+  const contactPhone = siteConfig.phone;
+
   const messageLines = [
     `Lead ID: ${leadId}`,
     `Name: ${lead.fullName}`,
@@ -98,8 +102,44 @@ async function sendLeadEmail(lead: LeadPayload, leadId: string) {
     from: `Pine Hills Lawn <${user}>`,
     to: salesEmail,
     subject: `New lawn care lead (${lead.fullName})`,
-    text: messageLines.join("\n")
+    text: messageLines.join("\n"),
+    replyTo: lead.email ? lead.email : undefined
   });
+
+  if (lead.email) {
+    const customerLines = [
+      `Hi ${lead.fullName},`,
+      "",
+      `Thank you for requesting a lawn care estimate from ${businessName}.`,
+      "We have received your request and will follow up within 1 business day.",
+      "",
+      "Request summary:",
+      `- Name: ${lead.fullName}`,
+      `- Phone: ${lead.phone}`,
+      `- Email: ${lead.email}`,
+      `- Address: ${lead.address}`,
+      `- Services: ${lead.serviceType.join(", ")}`,
+      `- Yard Size: ${lead.yardSize}`,
+      `- Preferred Contact: ${lead.preferredContact}`,
+      `- Notes: ${lead.notes || "None"}`,
+      "",
+      `If you need to update anything, reply to this email or call/text ${contactPhone}.`,
+      "",
+      `${businessName}`
+    ];
+
+    try {
+      await transporter.sendMail({
+        from: `Pine Hills Lawn <${user}>`,
+        to: lead.email,
+        subject: `We received your request - ${businessName}`,
+        text: customerLines.join("\n"),
+        replyTo: salesEmail
+      });
+    } catch (error) {
+      console.warn("[Lead] Confirmation email failed", error);
+    }
+  }
 
   return { delivered: true, channel: "email" } as const;
 }

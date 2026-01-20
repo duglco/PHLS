@@ -9,6 +9,7 @@ import { logEvent } from "@/lib/analytics";
 const initialForm = {
   fullName: "",
   phone: "",
+  email: "",
   address: "",
   serviceType: [] as (typeof serviceOptions)[number][]
 };
@@ -47,11 +48,11 @@ export default function HeroEstimateForm() {
     const payload: LeadPayload = {
       fullName: form.fullName,
       phone: form.phone,
-      email: "",
+      email: form.email,
       address: form.address,
       serviceType: form.serviceType,
       yardSize: "medium",
-      preferredContact: "call",
+      preferredContact: form.email ? "email" : "call",
       notes: ""
     };
 
@@ -132,6 +133,24 @@ export default function HeroEstimateForm() {
               {errors.phone && (
                 <span className="mt-1 block text-xs text-red-600">
                   {errors.phone}
+                </span>
+              )}
+            </label>
+          </div>
+          <div className="mt-[10px]">
+            <label className="text-[15px] font-semibold uppercase tracking-[0.2em] text-soil-600">
+              <span className="mb-[1px] block">Email</span>
+              <input
+                className="input-base mt-0 text-[17px]"
+                name="email"
+                type="email"
+                value={form.email}
+                onChange={(event) => updateField("email", event.target.value)}
+                autoComplete="email"
+              />
+              {errors.email && (
+                <span className="mt-1 block text-xs text-red-600">
+                  {errors.email}
                 </span>
               )}
             </label>
