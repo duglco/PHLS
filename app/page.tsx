@@ -44,7 +44,7 @@ export default function HomePage() {
     <div>
       <section className="relative overflow-hidden bg-[url('/grassbg1.jpg')] bg-cover bg-center">
         <div className="section-shell relative z-10 py-16 md:py-24">
-          <p className="mb-8 flex flex-wrap items-center justify-center gap-2 text-sm font-semibold text-black text-center">
+          <p className="mb-6 hidden flex-wrap items-center justify-center gap-2 text-sm font-semibold text-black text-center md:flex">
             <span>Licensed and insured crew</span>
             <span aria-hidden="true">•</span>
             <span>Weekly or bi-weekly plans</span>
@@ -56,7 +56,7 @@ export default function HomePage() {
             <p className="text-[21px] font-semibold uppercase tracking-[0.35em] text-black">
               {siteConfig.location}
             </p>
-            <h1 className="font-display text-4xl text-black md:text-5xl">
+            <h1 className="hidden font-display text-4xl text-black md:block md:text-5xl">
               Sharp lines, healthy lawns, and a yard you&apos;re proud of.
             </h1>
             <div className="flex flex-wrap gap-4">
