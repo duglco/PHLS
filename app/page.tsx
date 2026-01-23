@@ -9,7 +9,7 @@ const faqs = [
   {
     question: "How often should my lawn be mowed?",
     answer:
-      "Most Pine Hills lawns thrive on weekly service during peak growth and bi-weekly once growth slows."
+      "Our lawns thrive on weekly service during peak growth and bi-weekly once growth slows."
   },
   {
     question: "Do you haul away clippings and debris?",
