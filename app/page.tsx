@@ -43,15 +43,16 @@ export default function HomePage() {
   return (
     <div>
       <section className="relative overflow-hidden bg-[url('/grassbg1.jpg')] bg-cover bg-center">
-        <div className="section-shell relative z-10 grid items-center gap-10 py-16 md:grid-cols-[1.1fr,0.9fr] md:py-24">
-          <div className="space-y-6 -mt-8">
-            <p className="flex flex-wrap items-center gap-2 text-sm font-semibold text-black">
-              <span>Licensed and insured crew</span>
-              <span aria-hidden="true">•</span>
-              <span>Weekly or bi-weekly plans</span>
-              <span aria-hidden="true">•</span>
-              <span>Same-day callbacks</span>
-            </p>
+        <div className="section-shell relative z-10 py-16 md:py-24">
+          <p className="mb-8 flex flex-wrap items-center justify-center gap-2 text-sm font-semibold text-black text-center">
+            <span>Licensed and insured crew</span>
+            <span aria-hidden="true">•</span>
+            <span>Weekly or bi-weekly plans</span>
+            <span aria-hidden="true">•</span>
+            <span>Same-day callbacks</span>
+          </p>
+          <div className="grid items-center gap-10 md:grid-cols-[1.1fr,0.9fr]">
+            <div className="space-y-6 -mt-8">
             <p className="text-[21px] font-semibold uppercase tracking-[0.35em] text-black">
               {siteConfig.location}
             </p>
@@ -72,10 +73,11 @@ export default function HomePage() {
                 Call {siteConfig.phone}
               </Link>
             </div>
-          </div>
-          <div className="relative">
-            <div className="absolute -right-10 top-10 hidden h-48 w-48 rounded-full bg-pine-200/60 blur-3xl md:block" />
-            <HeroEstimateForm />
+            </div>
+            <div className="relative">
+              <div className="absolute -right-10 top-10 hidden h-48 w-48 rounded-full bg-pine-200/60 blur-3xl md:block" />
+              <HeroEstimateForm />
+            </div>
           </div>
         </div>
       </section>
