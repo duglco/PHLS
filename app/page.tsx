@@ -75,8 +75,8 @@ export default function HomePage() {
 
       <section className="section-shell py-16">
         <div className="mb-8">
-          <p className="max-w-3xl text-[21px] font-semibold text-black">
-            CANE BAY Lawn Services keeps your property looking crisp with
+          <p className="mx-auto max-w-3xl text-clamp-2 text-center text-[17px] font-semibold text-black">
+            Pine Hills Lawn Services keeps your property looking crisp with
             dependable mowing, edging, and seasonal treatments. Fast responses,
             clean finishes, and care you can see.
           </p>

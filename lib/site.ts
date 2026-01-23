@@ -6,7 +6,7 @@ export const siteConfig = {
   phoneHref: "tel:+18434605783",
   textHref: "sms:+18434605783",
   email: "Dustin@pinehillslawnservices.com",
-  location: "Serving Pine Hills and surrounding areas",
+  location: "Serving Cane Bay and surrounding areas",
   addressShort: "Pine Hills, FL",
   cta: "Request Estimate",
   hours: "Mon-Sat 7am-6pm"
