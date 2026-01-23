@@ -43,7 +43,7 @@ export default function HomePage() {
   return (
     <div>
       <section className="relative overflow-hidden bg-[url('/grassbg1.jpg')] bg-cover bg-center">
-        <div className="section-shell relative z-10 py-16 md:py-24">
+        <div className="section-shell relative z-10 pb-16 pt-2 md:pb-24 md:pt-2">
           <p className="mb-6 hidden flex-wrap items-center justify-center gap-2 text-sm font-semibold text-black text-center md:flex">
             <span>Licensed and insured crew</span>
             <span aria-hidden="true">•</span>
@@ -51,7 +51,7 @@ export default function HomePage() {
             <span aria-hidden="true">•</span>
             <span>Same-day callbacks</span>
           </p>
-          <div className="grid items-center gap-10 md:grid-cols-[1.1fr,0.9fr]">
+          <div className="mt-10 grid items-center gap-10 md:mt-14 md:grid-cols-[1.1fr,0.9fr]">
             <div className="space-y-6 -mt-8">
             <p className="text-[21px] font-semibold uppercase tracking-[0.35em] text-black">
               {siteConfig.location}
