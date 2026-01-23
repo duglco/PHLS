@@ -45,10 +45,10 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-[url('/grassbg1.jpg')] bg-cover bg-center">
         <div className="section-shell relative z-10 grid items-center gap-10 py-16 md:grid-cols-[1.1fr,0.9fr] md:py-24">
           <div className="space-y-6">
-            <p className="text-[21px] font-semibold uppercase tracking-[0.35em] text-soil-900">
+            <p className="text-[21px] font-semibold uppercase tracking-[0.35em] text-black">
               {siteConfig.location}
             </p>
-            <h1 className="font-display text-4xl text-soil-900 md:text-5xl">
+            <h1 className="font-display text-4xl text-black md:text-5xl">
               Sharp lines, healthy lawns, and a yard you&apos;re proud of.
             </h1>
             <div className="flex flex-wrap gap-4">
