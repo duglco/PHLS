@@ -98,9 +98,8 @@ async function sendLeadEmail(lead: LeadPayload, leadId: string) {
     `Email: ${lead.email || "N/A"}`,
     `Address: ${lead.address}`,
     `Services: ${lead.serviceType.join(", ")}`,
-    `Yard Size: ${lead.yardSize}`,
     `Preferred Contact: ${lead.preferredContact}`,
-    `Notes: ${lead.notes || "None"}`
+    `Additional Notes: ${lead.notes || "None"}`
   ];
 
   try {
@@ -129,9 +128,8 @@ async function sendLeadEmail(lead: LeadPayload, leadId: string) {
       `- Email: ${lead.email}`,
       `- Address: ${lead.address}`,
       `- Services: ${lead.serviceType.join(", ")}`,
-      `- Yard Size: ${lead.yardSize}`,
       `- Preferred Contact: ${lead.preferredContact}`,
-      `- Notes: ${lead.notes || "None"}`,
+      `- Additional Notes: ${lead.notes || "None"}`,
       "",
       `If you need to update anything, reply to this email or call/text ${contactPhone}.`,
       "",

@@ -11,6 +11,7 @@ const initialForm = {
   phone: "",
   email: "",
   address: "",
+  notes: "",
   serviceType: [] as (typeof serviceOptions)[number][]
 };
 
@@ -41,6 +42,16 @@ export default function HeroEstimateForm() {
     setErrors((prev) => ({ ...prev, serviceType: undefined }));
   }
 
+  function updateNotes(value: string) {
+    const words = value.trim().split(/\s+/).filter(Boolean);
+    if (words.length <= 1000) {
+      updateField("notes", value);
+      return;
+    }
+    const trimmed = words.slice(0, 1000).join(" ");
+    updateField("notes", trimmed);
+  }
+
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setStatus("submitting");
@@ -53,7 +64,7 @@ export default function HeroEstimateForm() {
       serviceType: form.serviceType,
       yardSize: "medium",
       preferredContact: form.email ? "email" : "call",
-      notes: ""
+      notes: form.notes
     };
 
     const result = leadSchema.safeParse(payload);
@@ -172,10 +183,27 @@ export default function HeroEstimateForm() {
               )}
             </label>
           </div>
+          <div className="mt-[10px]">
+            <label className="text-[15px] font-semibold uppercase tracking-[0.2em] text-soil-600">
+              <span className="mb-[1px] block">Comments</span>
+              <textarea
+                className="input-base mt-0 min-h-[110px] text-[17px]"
+                name="notes"
+                value={form.notes}
+                onChange={(event) => updateNotes(event.target.value)}
+                placeholder="Tell us about gates, pets, or timing."
+              />
+              {errors.notes && (
+                <span className="mt-1 block text-xs text-red-600">
+                  {errors.notes}
+                </span>
+              )}
+            </label>
+          </div>
         </div>
         <fieldset className="space-y-2">
           <legend className="mb-[1px] text-[15px] font-semibold uppercase tracking-[0.2em] text-soil-600">
-            Service needed
+            SERVICE(S) NEEDED
           </legend>
           <div className="grid gap-2 text-[15px] text-soil-700 sm:grid-cols-2">
             {serviceOptions.map((option) => (

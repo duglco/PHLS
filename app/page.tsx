@@ -51,8 +51,8 @@ export default function HomePage() {
             <h1 className="font-display text-4xl text-soil-900 md:text-5xl">
               Sharp lines, healthy lawns, and a yard you&apos;re proud of.
             </h1>
-            <p className="max-w-xl text-[21px] font-semibold text-white/90">
-              Pine Hills Lawn Services keeps your property looking crisp with
+            <p className="max-w-xl text-[21px] font-semibold text-white/90 text-outline-thick">
+              CANE BAY Lawn Services keeps your property looking crisp with
               dependable mowing, edging, and seasonal treatments. Fast responses,
               clean finishes, and care you can see.
             </p>
@@ -70,7 +70,7 @@ export default function HomePage() {
                 Call {siteConfig.phone}
               </Link>
             </div>
-            <div className="flex flex-wrap gap-6 text-[17px] font-semibold text-white">
+            <div className="flex flex-wrap gap-6 text-[17px] font-semibold text-white text-outline-thick">
               <span>Licensed crew</span>
               <span>Weekly or bi-weekly plans</span>
               <span>Same-day callbacks</span>
