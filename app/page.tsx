@@ -219,8 +219,8 @@ export default function HomePage() {
               See the crisp edges and clean finishes.
             </h2>
             <p className="text-base text-soil-700">
-              Browse real projects from Pine Hills properties to see the detail
-              we bring to every service.
+              Browse real projects from recent properties to see the detail we
+              bring to every service.
             </p>
             <Link
               href="/gallery"
