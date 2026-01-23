@@ -53,7 +53,7 @@ export default function HomePage() {
           </p>
           <div className="mt-10 grid items-center gap-10 md:mt-14 md:grid-cols-[1.1fr,0.9fr]">
             <div className="space-y-6 -mt-8">
-            <p className="text-center text-[21px] font-semibold uppercase tracking-[0.35em] text-black md:text-left">
+            <p className="text-center text-[21px] font-semibold uppercase tracking-normal text-black md:text-left">
               {siteConfig.location}
             </p>
             <h1 className="hidden font-display text-4xl text-black md:block md:text-5xl">
