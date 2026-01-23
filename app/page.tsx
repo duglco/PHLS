@@ -45,11 +45,11 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-[url('/grassbg1.jpg')] bg-cover bg-center">
         <div className="section-shell relative z-10 pb-16 pt-2 md:pb-24 md:pt-2">
           <p className="mb-6 hidden flex-wrap items-center justify-center gap-2 text-sm font-semibold text-black text-center md:flex">
-            <span>Licensed and insured crew</span>
+            <span>Licensed &amp; Insured Crew</span>
             <span aria-hidden="true">•</span>
-            <span>Weekly plans</span>
+            <span>Weekly Plans</span>
             <span aria-hidden="true">•</span>
-            <span>Same-day callbacks</span>
+            <span>Same-day Callbacks</span>
           </p>
           <div className="mt-10 grid items-center gap-10 md:mt-14 md:grid-cols-[1.1fr,0.9fr]">
             <div className="space-y-6 -mt-8">
