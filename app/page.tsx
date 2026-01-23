@@ -47,7 +47,7 @@ export default function HomePage() {
           <p className="mb-6 hidden flex-wrap items-center justify-center gap-2 text-sm font-semibold text-black text-center md:flex">
             <span>Licensed and insured crew</span>
             <span aria-hidden="true">•</span>
-            <span>Weekly or bi-weekly plans</span>
+            <span>Weekly plans</span>
             <span aria-hidden="true">•</span>
             <span>Same-day callbacks</span>
           </p>
@@ -191,9 +191,8 @@ export default function HomePage() {
                 Service Area
               </p>
               <h3 className="font-display text-2xl text-soil-900">
-                Pine Hills and nearby neighborhoods.
+                Cane Bay and nearby neighborhoods.
               </h3>
-              <p className="text-sm text-soil-600">{siteConfig.location}</p>
               <ul className="space-y-2 text-sm text-soil-700">
                 <li>• Residential homes and rentals</li>
                 <li>• Small commercial properties</li>
