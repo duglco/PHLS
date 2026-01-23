@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import EstimateForm from "@/components/EstimateForm";
+import HeroEstimateForm from "@/components/HeroEstimateForm";
 import { siteConfig } from "@/lib/site";
 
 export const metadata = {
@@ -60,9 +60,7 @@ export default function ContactPage() {
             </p>
           </div>
         </div>
-        <div className="rounded-[32px] border border-soil-200 bg-white p-6 shadow-card">
-          <EstimateForm />
-        </div>
+        <HeroEstimateForm />
       </section>
 
       <section className="rounded-[32px] bg-white p-8 shadow-sm">

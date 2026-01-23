@@ -51,11 +51,6 @@ export default function HomePage() {
             <h1 className="font-display text-4xl text-soil-900 md:text-5xl">
               Sharp lines, healthy lawns, and a yard you&apos;re proud of.
             </h1>
-            <p className="max-w-xl text-[21px] font-semibold text-white/90">
-              CANE BAY Lawn Services keeps your property looking crisp with
-              dependable mowing, edging, and seasonal treatments. Fast responses,
-              clean finishes, and care you can see.
-            </p>
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/contact"
@@ -79,6 +74,13 @@ export default function HomePage() {
       </section>
 
       <section className="section-shell py-16">
+        <div className="mb-8">
+          <p className="max-w-3xl text-[21px] font-semibold text-black">
+            CANE BAY Lawn Services keeps your property looking crisp with
+            dependable mowing, edging, and seasonal treatments. Fast responses,
+            clean finishes, and care you can see.
+          </p>
+        </div>
         <div className="grid gap-6 md:grid-cols-2">
           <a
             href="https://www.facebook.com/p/Pine-Hills-Lawn-Services-LLC-100090711670064/"
@@ -93,7 +95,7 @@ export default function HomePage() {
                 className="h-14 w-14"
               />
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-pine-700 text-outline-thick">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-pine-700">
                   Facebook
                 </p>
                 <h2 className="font-display text-2xl text-soil-900">
@@ -129,7 +131,7 @@ export default function HomePage() {
                 className="h-14 w-14"
               />
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-pine-700 text-outline-thick">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-pine-700">
                   Google
                 </p>
                 <h2 className="font-display text-2xl text-soil-900">

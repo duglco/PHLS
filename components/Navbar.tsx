@@ -46,6 +46,18 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
+            href={siteConfig.phoneHref}
+            className="button-base border border-pine-600 text-[17px] text-pine-700 hover:bg-pine-50"
+          >
+            Call
+          </Link>
+          <Link
+            href={siteConfig.textHref}
+            className="button-base border border-pine-600 text-[17px] text-pine-700 hover:bg-pine-50"
+          >
+            Text
+          </Link>
+          <Link
             href="/contact"
             className="button-base bg-pine-600 text-[17px] text-white shadow-glow hover:bg-pine-700"
           >
@@ -54,8 +66,8 @@ export default function Navbar() {
         </nav>
       </div>
       <div className="section-shell pb-4">
-        <p className="flex flex-wrap items-center gap-2 text-sm font-semibold text-black">
-          <span>Licensed crew</span>
+        <p className="flex flex-wrap items-center justify-center gap-2 text-sm font-semibold text-black text-center">
+          <span>Licensed and insured crew</span>
           <span aria-hidden="true">•</span>
           <span>Weekly or bi-weekly plans</span>
           <span aria-hidden="true">•</span>
