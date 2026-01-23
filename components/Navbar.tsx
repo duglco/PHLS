@@ -53,6 +53,15 @@ export default function Navbar() {
           </Link>
         </nav>
       </div>
+      <div className="section-shell pb-4">
+        <p className="flex flex-wrap items-center gap-2 text-sm font-semibold text-black">
+          <span>Licensed crew</span>
+          <span aria-hidden="true">•</span>
+          <span>Weekly or bi-weekly plans</span>
+          <span aria-hidden="true">•</span>
+          <span>Same-day callbacks</span>
+        </p>
+      </div>
     </header>
   );
 }
