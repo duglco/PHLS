@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { siteConfig } from "@/lib/site";
+import servicesHero from "@/lib/gallery/gal4.jpg";
 
 export const metadata = {
   title: "Services",
@@ -58,7 +59,7 @@ export default function ServicesPage() {
             Services
           </p>
           <h1 className="font-display text-4xl text-soil-900">
-            Full-service lawn care designed for Pine Hills homes.
+            Full-service lawn care.
           </h1>
           <p className="text-base text-soil-700">
             We build plans around your property so your lawn stays healthy and
@@ -81,11 +82,10 @@ export default function ServicesPage() {
         </div>
         <div className="rounded-[32px] border border-soil-200 bg-white p-4 shadow-card">
           <Image
-            src="/services-hero.svg"
+            src={servicesHero}
             alt="Crew trimming hedges"
-            width={560}
-            height={480}
             className="rounded-[24px] object-cover"
+            sizes="(min-width: 1024px) 420px, 90vw"
           />
         </div>
       </section>
