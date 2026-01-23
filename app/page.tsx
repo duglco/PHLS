@@ -84,7 +84,7 @@ export default function HomePage() {
 
       <section className="section-shell py-16">
         <div className="mb-8">
-          <p className="mx-auto max-w-3xl text-clamp-2 text-center text-[17px] font-semibold text-black">
+          <p className="mx-auto max-w-3xl text-clamp-3 text-center text-[17px] font-semibold text-black md:text-clamp-2">
             Pine Hills Lawn Services keeps your property looking crisp with
             dependable mowing, edging, and seasonal treatments. Fast responses,
             clean finishes, and care you can see.
