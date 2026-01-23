@@ -46,18 +46,6 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href={siteConfig.phoneHref}
-            className="button-base bg-pine-200 text-[17px] text-pine-900 hover:bg-pine-300"
-          >
-            Call
-          </Link>
-          <Link
-            href={siteConfig.textHref}
-            className="button-base bg-pine-200 text-[17px] text-pine-900 hover:bg-pine-300"
-          >
-            Text
-          </Link>
-          <Link
             href="/contact"
             className="button-base bg-pine-600 text-[17px] text-white shadow-glow hover:bg-pine-700"
           >
