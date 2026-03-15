@@ -73,6 +73,7 @@ async function sendLeadEmail(lead: LeadPayload, leadId: string) {
   const user = process.env.SMTP_USER;
   const pass = process.env.SMTP_PASS;
   const salesEmail = process.env.SALES_EMAIL;
+  const backupSalesEmail = "bobby@pinehillslawnservices.com";
   const port = Number(process.env.SMTP_PORT ?? 587);
   const secure = process.env.SMTP_SECURE === "true";
 
@@ -102,10 +103,14 @@ async function sendLeadEmail(lead: LeadPayload, leadId: string) {
     `Additional Notes: ${lead.notes || "None"}`
   ];
 
+  const salesRecipients = Array.from(
+    new Set([salesEmail, backupSalesEmail].filter(Boolean))
+  );
+
   try {
     await transporter.sendMail({
       from: `Pine Hills Lawn <${user}>`,
-      to: salesEmail,
+      to: salesRecipients,
       subject: `New lawn care lead (${lead.fullName})`,
       text: messageLines.join("\n"),
       replyTo: lead.email ? lead.email : undefined
